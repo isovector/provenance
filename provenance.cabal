@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c9b2171661d2b9002c9b350dd21bc02709e497a6abf61cd4e79c7a711e694530
+-- hash: d9c7e18f0f4453b669b84927a90f0e4e43909fb0f0e969648c17d780f33888cd
 
 name:           provenance
 version:        0.1.0.0
@@ -27,7 +27,6 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
       Provenance
   other-modules:
       Paths_provenance
@@ -37,34 +36,5 @@ library
   ghc-options: -Wall -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
-    , template-haskell
-  default-language: Haskell2010
-
-executable provenance-exe
-  main-is: Main.hs
-  other-modules:
-      Paths_provenance
-  hs-source-dirs:
-      app
-  default-extensions: DataKinds DeriveFunctor FlexibleContexts GADTs LambdaCase PolyKinds RankNTypes ScopedTypeVariables StandaloneDeriving TypeApplications TypeOperators TypeFamilies UnicodeSyntax
-  ghc-options: -Wall -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , provenance
-    , template-haskell
-  default-language: Haskell2010
-
-test-suite provenance-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Paths_provenance
-  hs-source-dirs:
-      test
-  default-extensions: DataKinds DeriveFunctor FlexibleContexts GADTs LambdaCase PolyKinds RankNTypes ScopedTypeVariables StandaloneDeriving TypeApplications TypeOperators TypeFamilies UnicodeSyntax
-  ghc-options: -Wall -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , provenance
     , template-haskell
   default-language: Haskell2010
